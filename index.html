@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <section>
+      <div class="main">
+        <fieldset>
+          <legend>YAY! It’s BOGO</legend>
+        </fieldset>
+
+        <div class="box" id="box1">
+          <div class="box-content">
+            <div class="content1">
+              <input type="radio" name="" id="" checked />
+              <div class="price1">
+                <p style="font-weight: bold">
+                  1 Unit
+                  <span
+                    style="
+                      background: #ff6b82;
+                      color: white;
+                      font-size: 12px;
+                      padding: 3px;
+                    "
+                    >10% Off</span
+                  >
+                </p>
+                <p>Standard price</p>
+              </div>
+            </div>
+            <div class="content2">
+              <p class="p1" style="font-weight: bold">$10.00 USD</p>
+              <p class="p2"><del>$24.00 USD</del></p>
+            </div>
+          </div>
+          <div class="box-main" id="box1-main">
+            <div class="div1">
+              <p class="div1p1">#1</p>
+
+              <p class="div1p2">#2</p>
+            </div>
+            <div class="div2">
+              <p>Size</p>
+              <select name="" id="">
+                <option value="">S</option>
+              </select>
+              <br />
+
+              <select name="" id="">
+                <option value="">S</option>
+              </select>
+            </div>
+            <div class="div3">
+              <p>Color</p>
+              <select name="" id="">
+                <option value="">Black</option>
+              </select>
+              <br />
+              <select name="" id="">
+                <option value="">Blue</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="box" id="box2">
+          <div class="box-content">
+            <div class="content1">
+              <input type="radio" name="" id="" />
+              <p style="font-weight: bold">
+                2 Unit
+                <span
+                  style="
+                    background: #ff6b82;
+                    color: white;
+                    font-size: 12px;
+                    padding: 3px;
+                  "
+                  >20% Off</span
+                >
+              </p>
+            </div>
+            <div class="content2">
+              <p class="p1" style="font-weight: bold">$18.00 USD</p>
+              <p class="p2"><del>$24.00 USD</del></p>
+            </div>
+          </div>
+          <div class="box-main" id="box2-main">
+            <div class="div1">
+              <p class="div1p1">#1</p>
+
+              <p class="div1p2">#2</p>
+            </div>
+            <div class="div2">
+              <p>Size</p>
+              <select name="" id="">
+                <option value="">S</option>
+              </select>
+              <br />
+
+              <select name="" id="">
+                <option value="">S</option>
+              </select>
+            </div>
+            <div class="div3">
+              <p>Color</p>
+              <select name="" id="">
+                <option value="">Black</option>
+              </select>
+              <br />
+              <select name="" id="">
+                <option value="">Blue</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="box" id="box3">
+          <div class="box-content">
+            <div class="content1">
+              <input type="radio" name="" id="" />
+              <div class="price1">
+                <p style="font-weight: bold">
+                  3 Unit
+                  <span
+                    style="
+                      background: #ff6b82;
+                      color: white;
+                      font-size: 12px;
+                      padding: 3px;
+                      vertical-align: super;
+                    "
+                    >10% Off</span
+                  >
+                </p>
+              </div>
+            </div>
+            <div class="content2">
+              <p class="p1" style="font-weight: bold">$24.00 USD</p>
+              <p class="p2"><del>$24.00 USD</del></p>
+            </div>
+          </div>
+          <div class="box-main" id="box3-main">
+            <div class="div1">
+              <p class="div1p1">#1</p>
+
+              <p class="div1p2">#2</p>
+            </div>
+            <div class="div2">
+              <p>Size</p>
+              <select name="" id="">
+                <option value="">S</option>
+              </select>
+              <br />
+
+              <select name="" id="">
+                <option value="">S</option>
+              </select>
+            </div>
+            <div class="div3">
+              <p>Color</p>
+              <select name="" id="">
+                <option value="">Black</option>
+              </select>
+              <br />
+              <select name="" id="">
+                <option value="">Blue</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div class="bottom">
+          <p style="color: #ff6b82; font-weight: bold">Free Delivery</p>
+          <p>Total:$18.00 USD</p>
+        </div>
+        <button class="btn">+ Add To Cart</button>
+        <p
+          style="
+            font-style: italic;
+            color: gray;
+            font-size: 15px;
+            margin: 10px 2px;
+            text-align: end;
+          "
+        >
+          @ Powered by Pumper
+        </p>
+      </div>
+    </section>
+    <script>
+      let box = document.querySelectorAll(".box");
+      let input = document.querySelector("input");
+
+      box.forEach((box) => {
+        const boxMain = box.querySelector(".box-main");
+
+        box.addEventListener("click", function () {
+          document.querySelectorAll(".box-main").forEach((otherBoxMain) => {
+            if (otherBoxMain !== boxMain) {
+              otherBoxMain.style.display = "none";
+              box.style.border = "1px solid #ff6b82";
+            }
+          });
+
+          if (
+            boxMain.style.display === "none" ||
+            boxMain.style.display === ""
+          ) {
+            boxMain.style.display = "flex";
+            box.style.border = "1px solid #ff6b82";
+          } else {
+            boxMain.style.display = "none";
+            box.style.border = "1px solid black";
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
